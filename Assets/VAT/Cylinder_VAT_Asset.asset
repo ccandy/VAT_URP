@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e846444011b0d4c97a8cac46815bdd6e, type: 3}
+  m_Name: Cylinder_VAT_Asset
+  m_EditorClassIdentifier: 
+  bakedMesh: {fileID: 4300000, guid: 13242156c55c3476bbca232d72d78131, type: 2}
+  lookupTex: {fileID: 2800000, guid: 2e250589c7924448687e106c68089909, type: 2}
+  positionTex: {fileID: 2800000, guid: 80581beb85d7741f895d70f08641b9bc, type: 2}
+  rotationTex: {fileID: 2800000, guid: 257587eb883a64f8abef8358774003f8, type: 2}
+  colorTex: {fileID: 2800000, guid: 0afa20cd8f0f24f19899629405d955ad, type: 2}
+  frameCount: 120
+  houdiniFPS: 24
+  boundMin: {x: -0.5789441, y: -1, z: -0.5789443}
+  boundMax: {x: 0.5789442, y: 1, z: 0.57894415}
+  lookupAxisSwapped: 0
+  atlasWidth: 128
+  atlasHeight: 128
+  lookupWidth: 128
+  lookupHeight: 128
