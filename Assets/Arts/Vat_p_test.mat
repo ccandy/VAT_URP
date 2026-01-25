@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Vat_test
+  m_Name: Vat_p_test
   m_Shader: {fileID: 4800000, guid: df94f345dbceaf5449fbdd3d33712a73, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
