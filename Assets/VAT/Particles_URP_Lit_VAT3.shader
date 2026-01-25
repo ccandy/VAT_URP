@@ -253,60 +253,10 @@
             half4 frag(Varyings IN) : SV_Target
             {
                 
-                half4 baseTex = SAMPLE_TEXTURE2D(_BaseMap, sampler_BaseMap, IN.uv);
-    half4 albedo  = baseTex * IN.col;     // IN.col = _BaseColor * vertexColor
-    half alpha    = saturate(albedo.a);
-
-    half3 N = normalize(IN.normal);
-
-    // 视线方向（世界空间）
-    half3 V = normalize(GetWorldSpaceViewDir(IN.positionWS));
-
-    // 环境
-    half3 ambient = SampleSH(N);
-
-    // Smoothness -> shininess（Blinn-Phong 指数）
-    // 你可以调这个映射让高光更锐/更糊
-    half shininess = lerp(8.0h, 256.0h, saturate(_Smoothness));
-    half  specInt  = _SpecColor.a;
-    half3 specCol  = _SpecColor.rgb;
-
-    // 主光（带阴影）
-    float4 shadowCoord = TransformWorldToShadowCoord(IN.positionWS);
-    Light mainLight = GetMainLight(shadowCoord);
-
-    half3 L = normalize(mainLight.direction);
-    half  NdotL = saturate(dot(N, L));
-
-    half3 H = normalize(L + V);
-    half  NdotH = saturate(dot(N, H));
-    half  spec  = pow(NdotH, shininess) * specInt;
-
-    half3 lighting = ambient
-                   + mainLight.color * (NdotL + specCol * spec) * mainLight.shadowAttenuation;
-
-    // 额外灯
-    #if defined(_ADDITIONAL_LIGHTS)
-    uint lightCount = GetAdditionalLightsCount();
-    for (uint i = 0u; i < lightCount; ++i)
-    {
-        Light l = GetAdditionalLight(i, IN.positionWS);
-
-        half3 L2 = normalize(l.direction);
-        half  ndl = saturate(dot(N, L2));
-
-        half3 H2 = normalize(L2 + V);
-        half  ndh = saturate(dot(N, H2));
-        half  sp  = pow(ndh, shininess) * specInt;
-
-        lighting += l.color * (ndl + specCol * sp) * l.distanceAttenuation * l.shadowAttenuation;
-    }
-    #endif
-
-    half3 litRgb = albedo.rgb * lighting;
-    litRgb = MixFog(litRgb, IN.positionHCS.z);
-
-    return half4(litRgb, alpha);
+                Light mainLight = GetMainLight();
+                float ndl = saturate(dot(IN.normal, mainLight.direction));
+                float3 lit = IN.col * ndl * mainLight.color;
+                return half4(lit, 1);
             }
 
             ENDHLSL
