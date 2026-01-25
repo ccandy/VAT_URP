@@ -24,7 +24,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: 31df51d9ba1afbc4fbdbb3314c2450b2, type: 3}
+        m_Texture: {fileID: 2800000, guid: 11e9c2dd9f66e034789f9e6534e6aa90, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
@@ -64,18 +64,18 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _lookupTexture:
-        m_Texture: {fileID: 2800000, guid: 4ff2acee830ab3f46909f363a2e093d0, type: 3}
+        m_Texture: {fileID: 2800000, guid: 75e129f0d627ca1448a03b31559c36fd, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _posTexture:
-        m_Texture: {fileID: 2800000, guid: 928c8557b0b372c4a9fe12aa8ed9b05b, type: 3}
+        m_Texture: {fileID: 2800000, guid: 02099eaf9b27bc541882b484b28c1d90, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
     - _B_animUVFlipV: 1
-    - _B_animUVSwapXY: 1
-    - _B_autoPlayback: 0
+    - _B_animUVSwapXY: 0
+    - _B_autoPlayback: 1
     - _B_frameInterp: 0
     - _B_lookupFlipV: 0
     - _B_lookupTexIsHDR: 0
@@ -98,10 +98,10 @@ Material:
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
-    - _displayFrame: 2.69
-    - _houdiniFPS: 63.5
-    - _numFrames: 1
-    - _playbackSpeed: 3.03
+    - _displayFrame: 0
+    - _houdiniFPS: 120
+    - _numFrames: 100
+    - _playbackSpeed: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
