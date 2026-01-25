@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Vat_p_test
-  m_Shader: {fileID: 4800000, guid: df94f345dbceaf5449fbdd3d33712a73, type: 3}
+  m_Shader: {fileID: 4800000, guid: bc45e9cc6d794d241b7170f541d1202f, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -24,7 +24,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: 11e9c2dd9f66e034789f9e6534e6aa90, type: 3}
+        m_Texture: {fileID: 2800000, guid: bf47435664603204a8e93f6e182dc63c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
@@ -63,16 +63,24 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _colTexture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _lookupTexture:
         m_Texture: {fileID: 2800000, guid: 75e129f0d627ca1448a03b31559c36fd, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _posTexture:
-        m_Texture: {fileID: 2800000, guid: 02099eaf9b27bc541882b484b28c1d90, type: 3}
+        m_Texture: {fileID: 2800000, guid: 2e1d69da4542a8546a447234957f2d88, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _rotTexture:
         m_Texture: {fileID: 2800000, guid: 3001696e95b80a44db69a8cde5b7d908, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _vatPosTex:
+        m_Texture: {fileID: 2800000, guid: 2e1d69da4542a8546a447234957f2d88, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
@@ -82,16 +90,21 @@ Material:
     - _B_autoPlayback: 1
     - _B_debugNormal: 0
     - _B_frameInterp: 0
+    - _B_hideOverlappingOrigin: 0
     - _B_isTexHdr: 0
+    - _B_killInvalid: 1
     - _B_lookupFlipV: 0
     - _B_lookupTexIsHDR: 0
+    - _B_pscaleInPosA: 1
     - _B_reversePlayback: 1
+    - _B_spinFromHeading: 0
     - _B_supportSurfaceNormalMaps: 1
     - _B_useBounds: 1
+    - _B_useColTex: 0
     - _B_useRot: 1
     - _BaseUVSource: 1
     - _BumpScale: 1
-    - _Cutoff: 0.5
+    - _Cutoff: 1
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _GlossMapScale: 1
@@ -106,14 +119,26 @@ Material:
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
-    - _displayFrame: 0
+    - _cutoff: 0
+    - _displayFrame: 1
+    - _frameCount: 100
+    - _gameTimeAtFirstFrame: 0
+    - _globalPscaleMul: 1
+    - _heightBaseScale: 0.2
     - _houdiniFPS: 120
     - _numFrames: 100
-    - _playbackSpeed: 1
+    - _originRadius: 0
+    - _particleTexUScale: 1
+    - _particleTexVScale: 1
+    - _playbackSpeed: 0.5
+    - _scaleByVelAmount: 1
+    - _widthBaseScale: 0.2
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _boundMax: {r: 1, g: 1, b: 1, a: 0}
+    - _boundMin: {r: 0, g: 0, b: 0, a: 0}
     - _posMax: {r: 1, g: 1, b: 1, a: 0}
     - _posMin: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
